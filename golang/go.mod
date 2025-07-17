@@ -1,6 +1,6 @@
 module github.com/aliyun/wuying-agentbay-sdk/golang
 
-go 1.24.4
+go 1.23.4
 
 toolchain go1.24.5
 
