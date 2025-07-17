@@ -136,6 +136,9 @@ main() {
     # Install tools if not already installed
     install_tools
 
+    # Run linting
+    run_linting
+
     # Run security scans
     run_security_scan
 
