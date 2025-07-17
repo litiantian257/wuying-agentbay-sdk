@@ -66,6 +66,34 @@ install_tools() {
     pip install pytest pytest-cov
 }
 
+# Linting function
+run_linting() {
+    if [ "$SKIP_LINT" = true ]; then
+        print_warning "Skipping linting checks"
+        return 0
+    fi
+
+    print_section "Running code linting and formatting"
+
+    # Run flake8 to check for code issues
+    echo "Running flake8..."
+    python -m flake8 agentbay tests --count --select=E9,F63,F7,F82 --show-source --statistics
+
+    # For more comprehensive checks (uncomment when ready)
+    # python -m flake8 agentbay tests --count --max-complexity=10 --max-line-length=127 --statistics
+
+    # Run black to format code, excluding agentbay/api/models directory
+    echo "Running black formatter..."
+    python -m black agentbay tests --exclude "agentbay/api/models"
+
+    # Check if there are uncommitted changes after formatting
+    if ! git diff --quiet agentbay tests; then
+        print_warning "Formatting changes were made. Please review and commit these changes."
+    else
+        print_success "No formatting changes needed."
+    fi
+}
+
 # Security scanning function
 run_security_scan() {
     if [ "$SKIP_SECURITY" = true ]; then
