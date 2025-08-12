@@ -1,4 +1,4 @@
-name: Build and Publish to npm
+name: Manual Build and Publish to npm
 
 on:
   workflow_dispatch:  # 手动触发
