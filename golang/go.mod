@@ -1,4 +1,4 @@
-module github.com/aliyun/wuying-agentbay-sdk/golang
+module github.com/litiantian257/wuying-agentbay-sdk/golang
 
 go 1.24.4
 

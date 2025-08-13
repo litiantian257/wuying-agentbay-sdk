@@ -50,8 +50,6 @@ tsconfig.json
 *.out
 go.work
 vendor/
-*.mod
-*.sum
 
 # IDE
 .idea/
