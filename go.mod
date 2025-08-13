@@ -1,5 +1,5 @@
-module github.com/litiantian257/wuying-agentbay-sdk/golang
+module github.com/litiantian257/wuying-agentbay-sdk
 
 go 1.24.3
 
-require github.com/litiantian257/wuying-agentbay-sdk v0.1.5 // indirect
+require github.com/litiantian257/wuying-agentbay-sdk v0.1.6 // indirect
