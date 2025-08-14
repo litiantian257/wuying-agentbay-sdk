@@ -1,4 +1,4 @@
-module github.com/aliyun/wuying-agentbay-sdk/golang
+module github.com/litiantian257/wuying-agentbay-sdk
 
 go 1.24.4
 
@@ -7,6 +7,7 @@ toolchain go1.24.5
 require (
 	github.com/alibabacloud-go/darabonba-openapi/v2 v2.1.7
 	github.com/alibabacloud-go/tea v1.3.8
+	github.com/aliyun/wuying-agentbay-sdk/golang v0.0.0-20250808024054-97279811c6f7
 	github.com/golang/mock v1.6.0
 	github.com/joho/godotenv v1.5.1
 	github.com/stretchr/testify v1.8.4
